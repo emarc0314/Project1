@@ -1,8 +1,8 @@
-# Project 1 - *Name of App Here*
+# Project 1 - Flixter
 
-**Name of your app** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
+Flisxter shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
 
-Time spent: **X** hours spent in total
+Time spent: 12 hours spent in total
 
 ## User Stories
 
@@ -10,7 +10,7 @@ The following **required** functionality is completed:
 
 * [x] User can **scroll through current movies** from the Movie Database API
 * [x] Display a nice default [placeholder graphic](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#advanced-usage) for each image during loading
-* [x] For each movie displayed, user can see the following details:
+* For each movie displayed, user can see the following details:
   * [x] Title, Poster Image, Overview (Portrait mode)
   * [x] Title, Backdrop Image, Overview (Landscape mode)
 * [x] Allow user to view details of the movie including ratings within a separate activity
@@ -24,12 +24,11 @@ The following **stretch** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [x] If the movie poster takes time loading, a buffer PNG takes its place.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
 
 ![project1](https://user-images.githubusercontent.com/75585259/171966800-19feb3ae-1f06-4d6d-a9d1-ca3c4873cdd0.gif)
 
@@ -37,7 +36,7 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+One of the major challenges was setting up the View Binding, which took about a half hour to implement. Also, setting up the constraints of the subViews in the Activity were difficult to setup because of using RelativeLayout. 
 
 ## Open-source libraries used
 
