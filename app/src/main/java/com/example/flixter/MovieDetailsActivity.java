@@ -10,10 +10,8 @@ import android.widget.TextView;
 import org.parceler.Parcels;
 
 public class MovieDetailsActivity extends AppCompatActivity {
-
     // the movie to display
     Movie movie;
-
     // the view objects
     TextView tvTitle;
     TextView tvOverview;
@@ -40,10 +38,5 @@ public class MovieDetailsActivity extends AppCompatActivity {
         // vote average is 0..10, convert to 0..5 by dividing by 2
         float voteAverage = movie.getVoteAverage().floatValue();
         rbVoteAverage.setRating(voteAverage / 2.0f);
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_movie_details);
-//    }
     }
 }

@@ -9,10 +9,10 @@
         <entry key="app/src/main/res/drawable/load_icon_background.xml" value="0.18" />
         <entry key="app/src/main/res/drawable/load_movie_background.xml" value="0.1615" />
         <entry key="app/src/main/res/drawable/load_movies_background.xml" value="0.1615" />
-        <entry key="app/src/main/res/layout-land/item_movie.xml" value="0.25" />
+        <entry key="app/src/main/res/layout-land/item_movie.xml" value="0.19208068847656248" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2899520874023438" />
         <entry key="app/src/main/res/layout/activity_movie_details.xml" value="0.2855570475260417" />
-        <entry key="app/src/main/res/layout/item_movie.xml" value="0.279327392578125" />
+        <entry key="app/src/main/res/layout/item_movie.xml" value="0.29774017333984376" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/load_icon.xml" value="0.1615" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/load_icon_round.xml" value="0.1615" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/load_movie.xml" value="0.1615" />

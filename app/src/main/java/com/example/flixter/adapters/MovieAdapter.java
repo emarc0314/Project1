@@ -9,12 +9,15 @@ import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.RoundedCorner;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+//import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.flixter.Movie;
 import com.example.flixter.MovieDetailsActivity;
 import com.example.flixter.R;
@@ -25,7 +28,6 @@ import java.util.List;
 
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
-
     Context context;
     List<Movie> movies;
 
@@ -43,7 +45,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         return new ViewHolder(movieView);
     }
 
-
     //involves populating data into the item through the holder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
@@ -60,7 +61,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-
         TextView tvTitle;
         TextView tvOverview;
         ImageView ivPoster;
@@ -71,7 +71,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             tvOverview = itemView.findViewById(R.id.tvOverview);
             ivPoster = itemView.findViewById(R.id.ivPoster);
             itemView.setOnClickListener(this);
-
         }
 
         public void bind(Movie movie) {
@@ -79,13 +78,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             tvOverview.setText(movie.getOverview());
 
             String imageUrl;
-            //if phone is in landscape, imageUrl =-
-
             int imageWidth;
             int imageHeight;
+
             if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
                 imageUrl = movie.getBackdropPath();
-                imageWidth =700;
+                imageWidth = 700;
                 imageHeight = 700;
 
             } else {
@@ -93,8 +91,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                 imageWidth = 300;
                 imageHeight = 300;
             }
+            int radius = 30; // corner radius, higher value = more rounded
+            int margin = 10; // crop margin, set to 0 for corners with no crop
 
-            Glide.with(context).load(imageUrl)
+            Glide.with(context)
+                    .load(imageUrl)
+                    .transform(new RoundedCorners(radius))
                     .override(imageWidth, imageHeight)
                     .placeholder(R.drawable.flicks_movie_placeholder)
                     .into(ivPoster);
